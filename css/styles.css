@@ -5,6 +5,13 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+.image-text {
+  margin-top: 0;
+  float: left;
+  width: 25%;
+
+}
+
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 5.62rem;
@@ -37,8 +44,8 @@ a:hover {
   color: #EAF6F6;
 }
 
-p{
-  line-height: 2;
+li{
+  margin-bottom: 1.5rem;
 }
 
 hr {
@@ -50,12 +57,10 @@ hr {
 
 }
 
-
-
 .top-container {
   background-color: #E4F9F5;
   position: relative;
-  padding-top: 100px;
+  padding-top: 5.1rem;
 }
 
 .middle-container {
@@ -96,10 +101,18 @@ hr {
   border-radius: 50%;
 }
 
+
 .skill-img {
   width: 25%;
   float: left;
   margin-right: 30px;
+}
+
+.skill-row{
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+
 }
 
 .education-img {
@@ -109,12 +122,7 @@ hr {
 }
 
 
-.skill-row{
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-  
-}
+
 
 .exp-img {
   width: 20%;
@@ -128,19 +136,6 @@ hr {
   text-align: left;
   line-height: 2;
 }
-
-
-
-
-
-
-
-
-/*.skill-p {
-  clear: left;
-}
-*/
-
 
 
 
@@ -192,4 +187,93 @@ hr {
   background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
   background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
 
+}
+
+.skill-list {
+  padding-left: 0px;
+
+}
+
+
+
+
+header {
+  background: #E4F9F5;
+  width: 100%;
+  clear: both;
+
+  display: table;
+
+}
+
+.menu {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.img-nav {
+
+  float: left;
+
+    margin-top: 5px;
+  -webkit-border-radius: 40;
+  -moz-border-radius: 40;
+  border-radius: 40px;
+  font-family: Arial;
+  color: #66BFBF;
+  font-size: 20px;
+  bg-start-gradient: ;
+  bg-end-gradient: ;
+  padding: 10px 20px 10px 20px;
+  border: solid #66BFBF 8px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.img-nav:hover {
+  background: #30E3CB;
+  background-image: -webkit-linear-gradient(top, #30E3CB, #2BC4AD);
+  background-image: -moz-linear-gradient(top, #30E3CB, #2BC4AD);
+  background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
+  background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
+  background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
+
+}
+nav {
+  float: right;
+
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 75px;
+  padding: 12px 0;
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #66BFBF;
+  font-weight: bold;
+}
+
+nav ul li a::before {
+  display: block;
+  
+  width: 0%;
+  background: #66BFBF;
+  height: 5px;
+  top:0;
+  position: absolute;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.navig{
+    position: fixed;
 }
