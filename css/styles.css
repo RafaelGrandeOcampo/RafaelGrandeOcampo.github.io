@@ -1,3 +1,7 @@
+
+
+/* principales */
+
 body {
   color: #40514E;
   margin: 0;
@@ -5,12 +9,6 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-.image-text {
-  margin-top: 0;
-  float: left;
-  width: 25%;
-
-}
 
 h1 {
   font-family: 'Dancing Script', cursive;
@@ -57,10 +55,22 @@ hr {
 
 }
 
+/* contenedores */
+
+.portada {
+  /*background: #E4F9F5; */
+  background-image: url("/img/skyscrapers-4168483.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 .top-container {
-  background-color: #E4F9F5;
+
   position: relative;
   padding-top: 5.1rem;
+  height: 39rem;
+
 }
 
 .middle-container {
@@ -68,6 +78,8 @@ hr {
 
 
 }
+
+
 
 .bottom-container {
 
@@ -79,23 +91,28 @@ hr {
 
 }
 
+/* imagenes portada */
+
 .top-cloud {
   position: absolute;
   right: 300px;
   top: 50px;
+  width: 7rem;
 }
 
 .bottom-cloud {
   position: absolute;
-  left: 300px;
+  left: 250px;
   bottom: 300px;
+  width: 7rem;
 }
+
+/* Perfil */
 
 .intro {
   width: 60%;
   margin: auto;
 }
-
 
 .profile-img {
   border-radius: 50%;
@@ -103,6 +120,7 @@ hr {
 
 }
 
+/* experiencia */
 
 .skill-img {
   width: 25%;
@@ -121,15 +139,18 @@ hr {
   width: 25%;
   float: right;
   margin-left: 30px;
+  
+
+
 }
-
-
 
 
 .exp-img {
   width: 20%;
   margin-right: 30px;
   float: left;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .exp-row{
@@ -138,8 +159,6 @@ hr {
   text-align: left;
   line-height: 2;
 }
-
-
 
 .contact-msg {
   width: 30%;
@@ -196,11 +215,8 @@ hr {
 
 }
 
-
-
-
 header {
-  background: #E4F9F5;
+  /*background: #E4F9F5; */
   width: 100%;
   clear: both;
 
@@ -211,6 +227,7 @@ header {
 .menu {
   width: 900px;
   margin: 0 auto;
+  padding-top: 1.5rem;
 }
 
 .img-nav {
@@ -224,8 +241,6 @@ header {
   font-family: Arial;
   color: #66BFBF;
   font-size: 20px;
-  bg-start-gradient: ;
-  bg-end-gradient: ;
   padding: 10px 20px 10px 20px;
   border: solid #66BFBF 8px;
   text-decoration: none;
@@ -244,7 +259,6 @@ header {
 }
 nav {
   float: right;
-
 }
 
 nav ul li {
@@ -263,7 +277,7 @@ nav ul li a {
 
 nav ul li a::before {
   display: block;
-  
+
   width: 0%;
   background: #66BFBF;
   height: 5px;
@@ -274,8 +288,4 @@ nav ul li a::before {
 
 nav ul li a:hover::before {
   width: 100%;
-}
-
-.navig{
-    position: fixed;
 }
