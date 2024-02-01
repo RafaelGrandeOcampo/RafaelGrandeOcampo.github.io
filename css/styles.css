@@ -1,6 +1,4 @@
-
-
-/* principales */
+/* Estilos generales */
 
 body {
   color: #40514E;
@@ -9,6 +7,7 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+/* Estilos para títulos */
 
 h1 {
   font-family: 'Dancing Script', cursive;
@@ -18,11 +17,10 @@ h1 {
   margin-bottom: 0;
   color: #66BFBF;
 }
+
 h2 {
   font-family: 'Indie Flower', cursive;
-
   font-size: 2.5rem;
-
   color: #66BFBF;
   font-weight: normal;
 }
@@ -30,81 +28,117 @@ h2 {
 h3 {
   color: #11999E;
 }
-a{
+
+/* Estilos para enlaces */
+
+a {
   color: #11999E;
   text-decoration: none;
   font-family: 'PT Sans', sans-serif;
-
 }
 
 a:hover {
-
   color: #EAF6F6;
 }
 
-li{
+/* Estilos para listas */
+
+li {
   margin-bottom: 1.5rem;
 }
+
+/* Línea divisoria */
 
 hr {
   width: 10%;
   border: dotted #EAF6F6 6px;
   border-bottom: none;
   background-color: white;
-  margin: 100px auto 100px auto;
-
+  margin: 80px auto 80px auto;
 }
 
-/* contenedores */
+/* Estilos para contenedores */
 
 .portada {
-  /*background: #E4F9F5; */
   background-image: url("/img/skyscrapers-4168483.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.titulo_portada {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: #66BFBF;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .top-container {
-
   position: relative;
   padding-top: 5.1rem;
-  height: 39rem;
-
+  height: 45rem;
 }
 
 .middle-container {
   margin: 100px 0;
-
-
 }
 
-
-
 .bottom-container {
-
-
   background-color: #66BFBF;
   color: #11999E;
   text-decoration: none;
-  padding: 50px 0 30px ;
-
+  padding: 50px 0 30px;
 }
 
-/* imagenes portada */
+/* Imágenes en la portada */
 
-.top-cloud {
+.python-cloud {
   position: absolute;
-  right: 300px;
-  top: 50px;
+  right: 650px;
+  bottom: 590px;
   width: 7rem;
 }
 
-.bottom-cloud {
+.sql-cloud {
   position: absolute;
   left: 250px;
-  bottom: 300px;
+  bottom: 250px;
   width: 7rem;
+}
+
+.csharp-cloud {
+  position: absolute;
+  left: 650px;
+  bottom: 590px;
+  width: 7rem;
+}
+
+.java-cloud {
+  position: absolute;
+  right: 250px;
+  bottom: 250px;
+  width: 7rem;
+}
+
+/* Animación para las imágenes de nube */
+
+@keyframes moveClouds {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.python-cloud,
+.sql-cloud,
+.csharp-cloud,
+.java-cloud {
+  animation: moveClouds 5s ease-in-out infinite;
 }
 
 /* Perfil */
@@ -117,48 +151,72 @@ hr {
 .profile-img {
   border-radius: 50%;
   width: 15%;
-
 }
 
-/* experiencia */
+/* Estilos para habilidades y formación */
+
+.skills {
+  width: 60%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill-row.inverted {
+  grid-template-columns: 75% 25%;
+}
+
+.skill-image {
+  width: 100%;
+  padding: 20px;
+}
+
+.skill-text {
+  padding-left: 30px;
+  padding: 20px;
+}
+
+.skill-text h3 {
+  padding-left: 20px;
+}
 
 .skill-img {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
-}
-
-.skill-row{
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-
+  width: 100%;
 }
 
 .education-img {
   width: 25%;
   float: right;
   margin-left: 30px;
-  
-
-
 }
 
+/* Estilos para experiencia */
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 60%;
+  margin: 10px auto;
+  text-align: left;
+  line-height: 2;
+  gap: 20px;
+}
 
 .exp-img {
-  width: 20%;
-  margin-right: 30px;
-  float: left;
+  width: 100%;
+  grid-column: 2;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.exp-row{
-  width: 50%;
-  margin: 50px auto 50px auto;
-  text-align: left;
-  line-height: 2;
-}
+/* Mensaje de contacto */
 
 .contact-msg {
   width: 30%;
@@ -172,15 +230,19 @@ hr {
   margin-bottom: 5rem;
 }
 
-.copyright{
+/* Pie de página */
+
+.copyright {
   color: #EAF6F6;
   font-size: 0.75rem;
   padding: 20px 0;
-
 }
-.footer-link{
+
+.footer-link {
   margin: 10px 20px;
 }
+
+/* Botón de contacto */
 
 .btn {
   background: #11CDD4;
@@ -189,15 +251,14 @@ hr {
   background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
   background-image: -o-linear-gradient(top, #11CDD4, #11999E);
   background-image: linear-gradient(to bottom, #11CDD4, #11999E);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
   border-radius: 8px;
   font-family: 'PT Sans', sans-serif;
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-
 }
 
 .btn:hover {
@@ -207,21 +268,14 @@ hr {
   background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
   background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
   background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
-
 }
 
-.skill-list {
-  padding-left: 0px;
-
-}
+/* Cabecera y menú de navegación */
 
 header {
-  /*background: #E4F9F5; */
   width: 100%;
   clear: both;
-
   display: table;
-
 }
 
 .menu {
@@ -230,13 +284,15 @@ header {
   padding-top: 1.5rem;
 }
 
+svg {
+  fill: #66BFBF;
+}
+
 .img-nav {
-
   float: left;
-
-    margin-top: 5px;
-  -webkit-border-radius: 40;
-  -moz-border-radius: 40;
+  margin-top: 5px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
   border-radius: 40px;
   font-family: Arial;
   color: #66BFBF;
@@ -245,7 +301,6 @@ header {
   border: solid #66BFBF 8px;
   text-decoration: none;
   text-align: center;
-
 }
 
 .img-nav:hover {
@@ -255,10 +310,11 @@ header {
   background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
   background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
   background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
-
 }
+
 nav {
   float: right;
+  display: block;
 }
 
 nav ul li {
@@ -277,11 +333,10 @@ nav ul li a {
 
 nav ul li a::before {
   display: block;
-
   width: 0%;
   background: #66BFBF;
   height: 5px;
-  top:0;
+  top: 0;
   position: absolute;
   transition: width 0.2s;
 }
@@ -289,3 +344,53 @@ nav ul li a::before {
 nav ul li a:hover::before {
   width: 100%;
 }
+
+
+/*Social Media */
+
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-130px;
+    bottom:30px;
+    width:210px;
+    z-index: 1100;
+}
+.sticky li{
+    list-style-type:none;
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+
+/*
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:#2C3539;
+}
+
+*/
+.sticky li:hover {
+    transform: scale(1.4); /* Aumenta el tamaño al hacer hover */
+
+}
+
