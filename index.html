@@ -10,12 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="description"
-          content="El portafolio de Rafael Grande, un programador Junior que reside en Galicia, España."/>
+          content="El portafolio de Rafael Grande, un Key account manager reconvertido a programador"/>
     <meta name="keywords"
           content="rafael, grande, rafael grande, diseño web, python, data, analyst, data analyst, django, freelance, developer"/>
     <meta name="robots" content="index, follow"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap"
           rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c97e5d1e3e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/index.js"></script>
     <title>Rafael Grande</title>
 </head>
 
@@ -23,31 +29,40 @@
 
 <section class="portada">
 
-    <header>
-        <div class="menu">
-            <a id="navToggle" class="img-nav dropbtn" href="index.html">RG</a>
+    <header class="header">
 
-            <nav>
-                <ul id="navDropdown" class="dropdown-content">
-                    <li><a href="#perfil">Perfil</a></li>
-                    <li><a href="#formacion">Formación</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="nav">
+
+            <a class="logo nav-link" href="index.html">RG</a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#perfil">Perfil</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#formacion">Formación</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#experiencia">Experiencia</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#experiencia">Portafolio</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link nav-menu-link_active" href="#contacto">Download CV</a></li>
+            </ul>
+        </nav>
+
         </div>
     </header>
+
+    <img class="cloud-portada sql-cloud" src="img/sql.png" alt="cloud-img">
+    <img class="cloud-portada csharp-cloud" src="img/csharp.png" alt="cloud-img">
+    <img class="cloud-portada java-cloud" src="img/java.png" alt="cloud-img">
+    <img class="cloud-portada python-cloud" src="img/python.png" alt="cloud-img">
+    <img class="cloud-portada javascript-cloud" src="img/javascript_logo.png" alt="cloud-img">
+    <img class="cloud-portada html-cloud" src="img/html-logo.png" alt="cloud-img">
+    <img class="cloud-portada css-cloud" src="img/css-logo.png" alt="cloud-img">
 
     <div class="top-container">
         <div class="titulo_portada">
         <h1>Rafael Grande</h1>
-        <h2>Python Developer and Data Analyst</h2>
+        <h2>Full Stack Developer</h2>
         </div>
-        <img class="sql-cloud" src="img/sql.png" alt="cloud-img">
-        <img class="csharp-cloud" src="img/csharp.png" alt="cloud-img">
-        <img class="java-cloud" src="img/java.png" alt="cloud-img">
-        <img class="python-cloud" src="img/python.png" alt="cloud-img">
+
     </div>
 
 </section>
@@ -72,11 +87,19 @@
   </div>
 </section>
 <hr>
+<section id="experiencia" class="middle-container">
 
+    <div>
+        <h2>Skills.</h2>
+    </div>
+</section>
+<hr>
 <main id="formacion" class="middle-container">
-    <h2>Formacion.</h2>
-    <h4>Mi formacion se ha basado en tres pilares clave de toda empresa</h4>
 
+    <div class="titulo-seccion">
+        <h2>Formación.</h2>
+        <h4>Mi formación se ha basado en tres pilares clave de toda empresa</h4>
+    </div>
     <div class="skills">
 
         <section class="skill-row">
@@ -126,7 +149,7 @@
                         <a href="https://www.uaoceu.es/">
                             Universitat Abat
                             Oliba Ceu
-                        </a> y <a href="https://www.imf-formacion.com/">IMF Business School</a> (Madrid, España - 2015)</em>
+                        </a> (Madrid, España - 2015)</em>
                     </li>
                     <li>Community Manager <em>IMF Business School (Madrid, España - 2015)</em></li>
                 </ul>
@@ -139,10 +162,10 @@
 <section id="experiencia" class="middle-container">
 
     <div>
-        <h2>Experiencia</h2>
+        <h2>Experiencia.</h2>
 
         <div class="exp-row">
-            <div>
+            <div class="exp-imagen">
                 <img class="exp-img" src="img/logos/pretty.jpg" alt="PrettyBallerinas">
             </div>
             <div>
@@ -156,7 +179,7 @@
             </div>
         </div>
         <div class="exp-row">
-            <div>
+            <div class="exp-imagen">
                 <img class="exp-img" src="img/logos/atemporal.jpeg" alt="aTemporal">
             </div>
             <div>
@@ -174,7 +197,7 @@
             </div>
         </div>
         <div class="exp-row">
-            <div>
+            <div class="exp-imagen">
                 <img class="exp-img" src="img/logos/shbarcelona.png" alt="ShBarcelona">
             </div>
             <div>
@@ -190,7 +213,7 @@
             </div>
         </div>
         <div class="exp-row">
-            <div>
+            <div class="exp-imagen">
                 <img class="exp-img" src="img/logos/TcFruits.png" alt="TcFruits">
             </div>
             <div>
@@ -204,7 +227,7 @@
             </div>
         </div>
         <div class="exp-row">
-            <div>
+            <div class="exp-imagen">
                 <img class="exp-img" src="img/logos/lacasa.jpeg" alt="LaCasaAgency">
             </div>
             <div>
@@ -220,7 +243,7 @@
         </div>
 
         <div class="exp-row">
-            <div>
+            <div class="exp-imagen">
                 <img class="exp-img" src="img/logos/mcdonals.png" alt="McDonals">
             </div>
             <div>
@@ -242,7 +265,7 @@
 
 <section id="contacto">
     <div class="contact-me">
-        <h2>Contactame</h2>
+        <h2>Contactame.</h2>
         <p class="contact-msg">Si has detectado un error en el sitio, si piensas que algo puede ser mejorado o agregado
             al
             mismo, o si simplemente quieres conversar conmigo, esta es la forma de hacerlo. </p>
