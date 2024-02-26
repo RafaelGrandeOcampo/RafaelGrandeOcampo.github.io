@@ -1,5 +1,7 @@
 /* Estilos generales */
 
+
+
 body {
   color: #40514E;
   margin: 0;
@@ -63,23 +65,37 @@ hr {
   background-image: url("/img/skyscrapers-4168483.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .titulo_portada {
+
+  position: absolute;
   width: 100%;
-  margin-top: 50px;
+  height:100%;
+  margin-top: 0;
   margin-bottom: 0;
   color: #66BFBF;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
+  transform: translate(-50%, -20%);
+  top: 50%;
+  bottom:50%;
+
+
 }
 
 .top-container {
-  position: relative;
-  padding-top: 5.1rem;
-  height: 45rem;
+
+  padding-top: 120px;
+  height: calc(100vh - 80px);
 }
 
 .middle-container {
@@ -93,34 +109,77 @@ hr {
   padding: 50px 0 30px;
 }
 
+
+@media (max-width: 780px) {
+    .titulo_portada{
+
+    }
+    .top-container{
+        z-index: 1;
+
+    }
+}
+
 /* Imágenes en la portada */
 
+.cloud-portada{
+    position: absolute;
+    width: 7rem;
+
+}
+
 .python-cloud {
-  position: absolute;
-  right: 650px;
-  bottom: 590px;
-  width: 7rem;
+
+  right: 20%;
+  bottom: 30%;
+  transform: translateX(50%);
 }
 
 .sql-cloud {
   position: absolute;
-  left: 250px;
-  bottom: 250px;
-  width: 7rem;
+  left: 20%;
+  bottom: 30%;
+  transform: translateX(-50%);
 }
 
 .csharp-cloud {
-  position: absolute;
-  left: 650px;
-  bottom: 590px;
-  width: 7rem;
+
+  left: 30%;
+  bottom: 75%;
+  transform: translateX(-50%);
 }
 
 .java-cloud {
-  position: absolute;
-  right: 250px;
-  bottom: 250px;
-  width: 7rem;
+
+  right: 30%;
+  bottom: 75%;
+  transform: translateX(50%);
+}
+
+.javascript-cloud {
+
+  right: 15%;
+  bottom: 50%;
+  transform: translateX(50%);
+}
+.css-cloud {
+
+  left: 15%;
+  bottom: 50%;
+  transform: translateX(50%);
+}
+
+.html-cloud {
+
+  right: 50%;
+  bottom: 35%;
+  transform: translateX(50%);
+}
+
+@media (max-width: 780px) {
+    .cloud-portada{
+        display: none;
+    }
 }
 
 /* Animación para las imágenes de nube */
@@ -134,10 +193,7 @@ hr {
   }
 }
 
-.python-cloud,
-.sql-cloud,
-.csharp-cloud,
-.java-cloud {
+.cloud-portada {
   animation: moveClouds 5s ease-in-out infinite;
 }
 
@@ -150,7 +206,7 @@ hr {
 
 .profile-img {
   border-radius: 50%;
-  width: 15%;
+  width: 350px;
 }
 
 /* Estilos para habilidades y formación */
@@ -197,6 +253,61 @@ hr {
   margin-left: 30px;
 }
 
+/* Estilo para pantallas más pequeñas, como dispositivos móviles */
+@media (max-width: 780px) {
+  /* Cambia el orden de los elementos en la clase skill-row */
+  .skill-row {
+    display: flex;
+    flex-direction: column; /* Columna inversa en lugar de fila */
+
+    width:80%
+  }
+  .skill-row.inverted{
+    flex-direction:column-reverse;
+
+  }
+
+  /* Ajusta el estilo del texto en la clase skill-text */
+  .skill-text {
+    margin-bottom: 20px; /* Añade espacio entre los elementos */
+  }
+
+  /* Ajusta el estilo de la imagen en la clase skill-image */
+  .skill-image {
+
+    width:30%;* Añade espacio entre los elementos */
+  }
+
+  .skills {
+    width: 100%;
+
+  }
+
+  .skill-text h3 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .titulo-seccion {
+    margin-bottom:50px
+  }
+
+  hr {
+    margin: 40px auto 40px auto;
+
+  }
+
+  .intro{
+    width: 70%;
+  }
+
+  .profile-img {
+    width: 40%;
+
+  }
+
+}
+
 /* Estilos para experiencia */
 
 .exp-row {
@@ -213,9 +324,31 @@ hr {
   width: 100%;
   grid-column: 2;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+
 }
 
+@media (max-width: 780px) {
+
+    .exp-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-center: center;
+        width:80%;
+    }
+
+    .exp-img {
+
+
+
+    }
+    .exp-imagen {
+        width:30%;
+
+    }
+
+
+}
 /* Mensaje de contacto */
 
 .contact-msg {
@@ -228,6 +361,15 @@ hr {
   top: 150px;
   bottom: 150px;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 780px){
+
+    .contact-msg{
+        width:80%;
+        
+    }
+
 }
 
 /* Pie de página */
@@ -269,82 +411,6 @@ hr {
   background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
   background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
 }
-
-/* Cabecera y menú de navegación */
-
-header {
-  width: 100%;
-  clear: both;
-  display: table;
-}
-
-.menu {
-  width: 900px;
-  margin: 0 auto;
-  padding-top: 1.5rem;
-}
-
-svg {
-  fill: #66BFBF;
-}
-
-.img-nav {
-  float: left;
-  margin-top: 5px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  border-radius: 40px;
-  font-family: Arial;
-  color: #66BFBF;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  border: solid #66BFBF 8px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.img-nav:hover {
-  background: #30E3CB;
-  background-image: -webkit-linear-gradient(top, #30E3CB, #2BC4AD);
-  background-image: -moz-linear-gradient(top, #30E3CB, #2BC4AD);
-  background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
-  background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
-  background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
-}
-
-nav {
-  float: right;
-  display: block;
-}
-
-nav ul li {
-  list-style: none;
-  margin-left: 75px;
-  padding: 12px 0;
-  float: left;
-  position: relative;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #66BFBF;
-  font-weight: bold;
-}
-
-nav ul li a::before {
-  display: block;
-  width: 0%;
-  background: #66BFBF;
-  height: 5px;
-  top: 0;
-  position: absolute;
-  transition: width 0.2s;
-}
-
-nav ul li a:hover::before {
-  width: 100%;
-}
-
 
 /*Social Media */
 
@@ -393,4 +459,176 @@ nav ul li a:hover::before {
     transform: scale(1.4); /* Aumenta el tamaño al hacer hover */
 
 }
+
+
+
+
+
+/* Cabecera y menú de navegación */
+
+.header {
+  background-color: #01223B;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-bottom: 220px;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: #034574;
+  transition: 0.5s;
+}
+
+/* TOGGLE */
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 780px) {
+  body {
+    padding-top: 50px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #83c5f7;
+
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+    position:fixed;
+    z-index: 2;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+}
+
+
+
+
+
+
+
+/* sección momentos */
+
+.portada_momentos {
+  background-image: url("/img/sunset.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.foto_momentos {
+
+    width: 40rem;
+
+}
+
+.descripcion {
+  width: 70%;
+  margin: 50px auto 0 auto;
+}
+
+
 
